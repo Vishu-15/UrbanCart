@@ -20,9 +20,7 @@ const sessionOptions={
   cookie:{
       expires: Date.now() + 7*24*60*60*1000,
       maxAge: 7*24*60*60*1000,
-      secure: false, // true if using HTTPS in production
       httpOnly: true, //to prevent cross script attacks
-      sameSite: 'none', // or 'none' if cross-origin + HTTPS
   },
 };
 
