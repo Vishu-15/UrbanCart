@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 const CartItem = ({ item, isMobile }) => {
     const handleRemove = async () => {
         try {
-            await axios.get(`http://localhost:3000/api/removeFromCart?prodId=${item.productId._id}`);
+            await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/removeFromCart?prodId=${item.productId._id}`);
             toast("Item Removed from Cart Successfully!");
             setTimeout(() => {
                 window.location.reload();

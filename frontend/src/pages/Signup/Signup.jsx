@@ -27,7 +27,7 @@ export default function Signup(){
     const submitForm = async (event)=>{
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/signup', formData, {
+            const response = await axios.post('https://urbancart-backend-5jg9.onrender.com/api/signup', formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

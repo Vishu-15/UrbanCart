@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const genSaleProducts = async(num)=>{
-    let res = await axios.get(`http://localhost:3000/api/allProducts`, {
+    let res = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/allProducts`, {
         withCredentials: true, // Allows sending cookies and authentication headers
       });
     let products = await res.data;
@@ -10,7 +10,7 @@ export const genSaleProducts = async(num)=>{
 }
 
 export const genProductDetails = async(productId='673f57c7a60ec00750345db8')=>{
-    let res = await axios.get(`http://localhost:3000/api/products/${productId}`, {
+    let res = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/products/${productId}`, {
         withCredentials: true, // Allows sending cookies and authentication headers
       });
     let products = await res.data;
@@ -18,7 +18,7 @@ export const genProductDetails = async(productId='673f57c7a60ec00750345db8')=>{
 }
 
 export const genProducts = async(category="mobile-accessories",num)=>{
-    let res = await axios.get(`http://localhost:3000/api/allProducts`, {
+    let res = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/allProducts`, {
         withCredentials: true, // Allows sending cookies and authentication headers
       });
     let data = await res.data;
@@ -29,7 +29,7 @@ export const genProducts = async(category="mobile-accessories",num)=>{
 }
 
 export const genCategories = async(num)=>{
-    let res = await axios.get('http://localhost:3000/api/allProducts', {
+    let res = await axios.get('https://urbancart-backend-5jg9.onrender.com/api/allProducts', {
         withCredentials: true, // Allows sending cookies and authentication headers
       });
     let products = await res.data;

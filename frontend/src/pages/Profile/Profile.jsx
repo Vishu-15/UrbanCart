@@ -25,7 +25,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/getUser") // Fetch user data
+      .get("https://urbancart-backend-5jg9.onrender.com/api/getUser") // Fetch user data
       .then((response) => {
         const user = response.data.user;
         setUserData(user);
@@ -65,7 +65,7 @@ const Profile = () => {
 
   const handleSaveChanges = () => {
     axios
-      .put("http://localhost:3000/api/editUser", updatedData)
+      .put("https://urbancart-backend-5jg9.onrender.com/api/editUser", updatedData)
       .then((response) => {
         toast('Profile Updated!');
         setUserData(response.data.user);

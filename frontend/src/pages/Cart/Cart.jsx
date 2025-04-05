@@ -16,7 +16,7 @@ const Cart = () => {
     useEffect(() => {
         async function fetchCart() {
             try {
-                let res = await axios.get("http://localhost:3000/api/getUser");
+                let res = await axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser");
                 setCartItems(res.data.user.cart);
             } catch (e) {
                 if (e.response.data.message === "Unauthorized") {
@@ -34,7 +34,7 @@ const Cart = () => {
     }, []);
 
     async function handlePlaceOrder() {
-        window.location.href = "http://localhost:5173/placeOrder";
+        navigate('/placeOrder');
     }
 
     if (!cartItems || !cartItems.length) {

@@ -13,7 +13,7 @@ const Product = ({product,showWishIcon=true}) => {
 
     async function getUser(){
       try{
-        let res = await axios.get("http://localhost:3000/api/getUser");
+        let res = await axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser");
         setCurrUser({...res.data.user});
       }
       catch(e){
@@ -27,7 +27,7 @@ const Product = ({product,showWishIcon=true}) => {
 
     const handleLikeBtn =async (product)=>{
         try{
-          let res = await axios.get(`http://localhost:3000/api/updateWishlist?productId=${product._id}`);
+          let res = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/updateWishlist?productId=${product._id}`);
           toast('Wishlist Updated!');
           // console.log(res.data);
           getUser();

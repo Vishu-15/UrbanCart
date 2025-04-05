@@ -17,7 +17,7 @@ const Wishlist = () => {
                 const userData = localStorage.getItem("urbancart-user");
                 if (userData) {
                     setIsLoggedIn(true); // Set user as logged in before making API call
-                    let response = await axios.get("http://localhost:3000/api/getUser");
+                    let response = await axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser");
                     if (response.data?.user?.wishlist) {
                         setWishlist(response.data.user.wishlist);
                     } else {

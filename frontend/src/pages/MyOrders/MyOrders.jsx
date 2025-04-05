@@ -18,7 +18,7 @@ export default function MyOrders() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/getUser");
+                const response = await axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser");
                 console.log(response);
                 setOrders(response.data.user.orders);
             } catch (err) {

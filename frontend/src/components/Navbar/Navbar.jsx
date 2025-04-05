@@ -19,7 +19,7 @@ export default function Navbar() {
     
         if (!storedUser) return;
     
-        axios.get("http://localhost:3000/api/getUser")
+        axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser")
             .then((response) => {
                 const user = response?.data?.user;
                 if (!user || user.email !== storedUser) {
@@ -49,7 +49,7 @@ export default function Navbar() {
 
     const handleLogout = async () => {
         try {
-            let response = await axios.get('http://localhost:3000/api/logout');
+            let response = await axios.get('https://urbancart-backend-5jg9.onrender.com/api/logout');
             console.log(response.data.message);
             localStorage.removeItem("urbancart-user");
             setIsLoggedIn(false);

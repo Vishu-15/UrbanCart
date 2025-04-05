@@ -23,7 +23,7 @@ const PlaceOrder = () => {
             return ;
         }
         try {
-            let res = await axios.post("http://localhost:3000/api/createOrder",formData, {
+            let res = await axios.post("https://urbancart-backend-5jg9.onrender.com/api/createOrder",formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -63,7 +63,7 @@ const PlaceOrder = () => {
     // Payment verification
     const verifyPayment = async (orderId) => {
         try {
-            let res = await axios.get(`http://localhost:3000/api/verifyPayment?orderId=${orderId}`);
+            let res = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/verifyPayment?orderId=${orderId}`);
             if (res && res.data && res.data.length) {
                 if(res.data[0].payment_status=='SUCCESS'){
                     toast("Payment Successful , Order Placed!");
@@ -96,7 +96,7 @@ const PlaceOrder = () => {
     
     async function getUser(){
         try{
-            let res = await axios.get("http://localhost:3000/api/getUser");
+            let res = await axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser");
             let user = res.data.user;
             setCartItems(user.cart);
             setFormData({

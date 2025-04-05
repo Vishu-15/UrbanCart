@@ -11,7 +11,7 @@ const AdminPanel = () => {
         setActiveTab(tab);
         try {
             let endpoint = tab === 'Users' ? "allUsers" : tab === 'Products' ? "allProducts" : "allOrders";
-            let response = await axios.get(`http://localhost:3000/api/${endpoint}`);
+            let response = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/${endpoint}`);
             setContent(response.data);
         } catch (error) {
             console.error(`Failed to fetch ${tab}:`, error);

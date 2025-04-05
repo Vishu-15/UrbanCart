@@ -42,7 +42,7 @@ const ProductDetailsPage = () => {
 
     const handleBuyButton = async()=>{
         try {
-            let response = await axios.get(`http://localhost:3000/api/addToCart?productId=${product._id}&quantity=${quantitySelected}`,{withCredentials:true});
+            let response = await axios.get(`https://urbancart-backend-5jg9.onrender.com/api/addToCart?productId=${product._id}&quantity=${quantitySelected}`,{withCredentials:true});
             // console.log(response.data.message); 
             toast('Item added to Cart!');
             navigate('/cart');

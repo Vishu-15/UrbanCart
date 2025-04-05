@@ -26,7 +26,7 @@ export default function Login(){
         console.log(formData);
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/login', formData, {
+            const response = await axios.post('https://urbancart-backend-5jg9.onrender.com/api/login', formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
