@@ -1,6 +1,7 @@
 import { Outlet, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "../components/Loader/Loader";
 
 const AdminLayout = () => {
     const [user, setUser] = useState(null);
@@ -19,7 +20,7 @@ const AdminLayout = () => {
             });
     }, []);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Loader/>;
 
     return user && user.email==storedUser && user.role === "admin" ? <Outlet /> : <Navigate to="/" />;
 };
