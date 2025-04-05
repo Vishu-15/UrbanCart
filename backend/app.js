@@ -13,7 +13,7 @@ const productRoute = require("./routes/productRoutes");
 const userRoute= require("./routes/userRoutes");
 const orderRoute = require("./routes/orderRoutes");
 
-const dbUrl = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/urbancarts';
+const dbUrl = process.env.MONGO_URL;
 main()
 .then(()=>{console.log("database initialized")})
 .catch(err => console.log(err));
