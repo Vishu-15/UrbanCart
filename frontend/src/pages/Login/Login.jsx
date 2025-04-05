@@ -35,7 +35,7 @@ export default function Login(){
             localStorage.setItem('urbancart-user',response.data.user.email);
             console.log('Login successful:', response.data);
             toast("Logged In Successfully!");
-            navigate('/'); 
+            // navigate('/'); 
         } 
         catch (error) {
             console.error('Login failed:', error.response?.data || error.message);
