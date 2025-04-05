@@ -1,0 +1,34 @@
+/* Services Wrapper */
+.all-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Adds spacing between service items */
+    margin: 6rem auto;
+    max-width: 1200px; /* Centers content and prevents excessive width */
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .all-services {
+        margin: 4rem auto;
+        gap: 1.5rem;
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .all-services {
+        margin: 3rem auto;
+        gap: 1.2rem;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .all-services {
+        margin: 2rem auto;
+        gap: 1rem;
+        max-width: 90%;
+    }
+}

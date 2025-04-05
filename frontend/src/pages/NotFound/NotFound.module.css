@@ -1,0 +1,78 @@
+.notFound {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+/* Large heading */
+.notFound h1 {
+    font-size: 5rem;
+    color: red;
+}
+
+/* Error message */
+.notFound p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Back Home Button */
+.notFound a {
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.notFound a:hover {
+    background: #333;
+    color: white;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .notFound {
+        padding: 4rem 1.5rem;
+    }
+    .notFound h1 {
+        font-size: 4rem;
+    }
+    .notFound p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .notFound {
+        padding: 3rem 1rem;
+    }
+    .notFound h1 {
+        font-size: 3rem;
+    }
+    .notFound p {
+        font-size: 1rem;
+    }
+    .notFound a {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notFound {
+        padding: 2rem 0.5rem;
+    }
+    .notFound h1 {
+        font-size: 2.5rem;
+    }
+    .notFound p {
+        font-size: 0.9rem;
+    }
+    .notFound a {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+}

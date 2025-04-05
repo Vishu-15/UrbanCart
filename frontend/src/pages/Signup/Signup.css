@@ -1,0 +1,178 @@
+/* Signup Page Layout */
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures it doesn't overflow */
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    overflow: auto; /* Prevents footer overlap */
+    gap: 1rem;
+}
+
+/* Signup Image Section */
+.signup-img {
+    width: 30%; /* Image takes less width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CBE4E8;
+}
+
+/* Signup Box (Always Larger than Image) */
+.signup-box {
+    width: 60%; /* Signup box takes more space */
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 6rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Heading */
+.signup-box h3 {
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5rem !important;
+    text-align: center;
+}
+
+/* Form */
+.signup-box form {
+    width: 100%;
+}
+
+/* Input Fields */
+.signup-box .inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.signup-box input {
+    width: 99%;
+    background-color: transparent;
+    color: black;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 1.3rem 0;
+    padding: 0.5rem 0;
+}
+
+.signup-box input:focus {
+    outline: none;
+    border-bottom: 2px solid #360E38;
+}
+
+/* Buttons */
+.signup-box button {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.signup-box .signup-btn {
+    background-color: #360E38;
+    color: white;
+    border: none;
+}
+
+.signup-box .signup-btn:hover {
+    background-color: #4a1250;
+}
+
+.signup-box .signup-google-btn {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.signup-box .signup-google-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Already Registered */
+.signup-box .already-registered {
+    margin: 1rem;
+    text-align: center;
+}
+
+.already-registered a {
+    color: red;
+    text-decoration: none;
+}
+
+.already-registered a:hover {
+    text-decoration: underline;
+}
+
+/* 🔽 Adjust at 1024px */
+@media (max-width: 1024px) {
+    .signup-box {
+        width: 65%; /* Make the signup box take more space */
+        padding: 2rem 3rem; /* Reduce padding to balance the size */
+    }
+
+    .signup-img {
+        width: 30%; /* Reduce the image width further */
+    }
+}
+
+/* ✅ Remove Image & Center Box on Smaller Screens */
+@media (max-width: 768px) {
+    .signup-page {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .signup-img {
+        display: none; /* Hide image section */
+    }
+
+    .signup-box {
+        width: 80%;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .signup-box h3 {
+        font-size: 1.8rem !important;
+    }
+
+    .signup-box input {
+        font-size: 1rem;
+    }
+
+    .signup-box button {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Extra Adjustments for Mobile */
+@media (max-width: 480px) {
+    .signup-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .signup-box h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .signup-box input {
+        font-size: 0.9rem;
+    }
+
+    .signup-box button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}

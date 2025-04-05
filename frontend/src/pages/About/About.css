@@ -1,0 +1,150 @@
+/* About Page */
+.about-page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+/* Full Width Sections */
+.full-width {
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Our Story */
+.our-story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; /* ✅ Adds spacing between text & image */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Story Content */
+.our-story .story {
+    width: 50%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Story Image */
+.story-img {
+    width: 40%;
+    max-width: 400px;
+}
+
+/* Story Heading */
+.story-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Contributors Section */
+.contributors {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    position:relative;
+}
+
+/* Contributors Slider */
+.contributors-slider {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Contributor Box */
+.contributor {
+    text-align: center;
+    width: 100%;
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 4rem;
+    color: black;
+    padding: 0.5rem;
+}
+
+.left-btn {
+    left: 26%;
+}
+
+.right-btn {
+    right: 26%;
+}
+
+/* 🔽 Responsive Fixes */
+@media (max-width: 1024px) {
+    .our-story .story {
+        width: 60%;
+        font-size: 1rem;
+    }
+    .story-img {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-story {
+        flex-direction: column;
+        text-align: center;
+    }
+    .our-story .story {
+        width: 80%;
+    }
+    .story-img {
+        width: 50%;
+    }
+    .contributors {
+        width: 100vw;
+    }
+    .contributors-slider {
+        width: 60%;
+    }
+    .left-btn {
+        left: 1rem;
+    }
+    .right-btn {
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-story .story {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    .story-img {
+        width: 80%;
+    }
+    .contributors {
+        width: 100vw;
+    }
+    .contributors-slider {
+        width: 80%;
+    }
+    .left-btn {
+        left: 0.5rem;
+    }
+    .right-btn {
+        right: 0.5rem;
+    }
+}

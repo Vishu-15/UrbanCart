@@ -1,0 +1,150 @@
+/* Login Page Layout */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures it doesn't overflow */
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    overflow: auto; /* Prevents footer overlap */
+    gap: 1rem;
+}
+
+/* Login Image Section */
+.login-img {
+    width: 30%; /* Image takes up less width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CBE4E8;
+}
+
+/* Login Box (Wider than Image) */
+.login-box {
+    width: 60%; /* Login box is larger than the image */
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 6rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Heading */
+.login-box h3 {
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5rem !important;
+    text-align: center;
+}
+
+/* Form */
+.login-box form {
+    width: 100%;
+}
+
+/* Input Fields */
+.login-box .inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.login-box input {
+    width: 99%;
+    background-color: transparent;
+    color: black;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 1.3rem 0;
+    padding: 0.5rem 0;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-bottom: 2px solid #360E38;
+}
+
+/* Login Button */
+.login-box .login-btn {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #360E38;
+    color: white;
+    border: none;
+}
+
+.login-box .login-btn:hover {
+    background-color: #4a1250;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .login-box {
+        width: 65%; /* Make the login box take more space */
+        padding: 2rem 3rem; /* Reduce padding to balance the size */
+    }
+
+    .login-img {
+        width: 30%; /* Reduce the image width further */
+    }
+}
+
+/* ✅ Remove Image & Center Box on Smaller Screens */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .login-img {
+        display: none; /* Hide image section */
+    }
+
+    .login-box {
+        width: 80%;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .login-box h3 {
+        font-size: 1.8rem !important;
+    }
+
+    .login-box input {
+        font-size: 1rem;
+    }
+
+    .login-box .login-btn {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Extra Adjustments for Mobile */
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .login-box h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .login-box input {
+        font-size: 0.9rem;
+    }
+
+    .login-box .login-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}

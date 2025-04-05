@@ -1,0 +1,222 @@
+/* Cart Page Layout */
+.carts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+/* Table Wrapper for Scrollability */
+.cart-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+}
+
+/* Cart Table */
+.cart-table {
+    width: 70%;
+    border-collapse: collapse;
+    box-shadow: 1px 1px 2px 2px rgb(186, 185, 185);
+    margin: 1rem auto;
+    background-color: white;
+}
+
+/* Table Headers */
+.cart-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Table Cells */
+.cart-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Product Column */
+.cart-item-imgname {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+}
+
+/* Product Image */
+.cart-item-imgname img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Product Name */
+.cart-item-name {
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Price & Quantity & Subtotal */
+.cart-item-price,
+.cart-item-quantity,
+.cart-item-subtotal {
+    font-size: 1rem;
+}
+
+/* Remove Button (Top Right of Product Cell) */
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e60000;
+    cursor: pointer;
+}
+
+/* Return to Shop Button */
+.return-shop {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 15rem;
+    margin: 1.5rem auto;
+    color: white;
+    background-color: #360E38;
+    border: 1px solid black;
+    text-align: center;
+    display: block;
+}
+
+/* Cart Bill Section */
+.carts-items-bill {
+    padding: 1rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Bill Summary */
+.bill-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0.8rem 0;
+}
+
+.bill-subtotal,
+.bill-shipping-charges,
+.bill-total {
+    margin: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+.bill-total {
+    font-weight: 600;
+}
+
+/* Divider */
+.bill-hr {
+    width: 100%;
+    margin: 0;
+}
+
+/* Place Order Button */
+.place-order {
+    background-color: #360E38;
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+    padding: 5rem 1rem;
+    margin: 3rem auto;
+    min-height: 50vh; /* pushes footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🔽 Responsive Adjustments for Medium Screens */
+@media (max-width: 1024px) {
+    .cart-table {
+        width: 85%;
+    }
+
+    .carts-items-bill {
+        width: 40%;
+    }
+}
+
+/* 🔽 Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    .cart-table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .cart-table th:nth-child(4),
+    .cart-table td:nth-child(4) {
+        display: none; /* Hide subtotal on small screens */
+    }
+
+    .carts-items-bill {
+        width: 60%;
+    }
+}
+
+/* 🔽 Responsive Adjustments for Small Screens */
+@media (max-width: 480px) {
+    .cart-table {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 0.5rem;
+    }
+
+    .carts-items-bill {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .bill-heading,
+    .bill-subtotal,
+    .bill-shipping-charges,
+    .bill-total {
+        font-size: 1rem;
+    }
+
+    .place-order {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .return-shop {
+        width: 80%;
+        font-size: 1rem;
+    }
+}

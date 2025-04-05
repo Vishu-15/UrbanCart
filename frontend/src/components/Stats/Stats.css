@@ -1,0 +1,146 @@
+/* Stats Section - Centered */
+.stats-container {
+    display: flex;
+    justify-content: center; /* ✅ Center horizontally */
+    align-items: center; /* ✅ Center vertically */
+    gap: 2rem; /* ✅ Adjusted for better spacing */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto; /* ✅ Centers it inside the About page */
+    padding: 3rem 2rem;
+    text-align: center;
+    background: white; /* ✅ Keeps the background white */
+}
+
+/* Individual Stat Card */
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: #360E38;
+    color: white;
+}
+
+/* Icon */
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #360E38;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Number */
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Label */
+.stat-label {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+/* ✅ Change Text & Icon Color on Hover */
+.stat-card:hover .stat-icon,
+.stat-card:hover .stat-value,
+.stat-card:hover .stat-label {
+    color: white;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .stats-container {
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .stat-card {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+    }
+
+    .stat-value {
+        font-size: 1.6rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+
+    .stat-card {
+        width: 140px;
+        height: 140px;
+    }
+
+    .stat-icon {
+        font-size: 1.8rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+}
+
+/* ✅ Fixing Overflow Below 425px */
+@media (max-width: 425px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        width: 90%;
+        max-width: 250px;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .stat-icon {
+        font-size: 1.6rem;
+    }
+
+    .stat-value {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}

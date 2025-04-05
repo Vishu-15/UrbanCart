@@ -1,0 +1,35 @@
+.auth-img {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width for large screens */
+    background-color: #CBE4E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add padding for smaller screens */
+}
+
+.auth-img img {
+    width: 70%;
+    max-width: 400px; /* Prevents image from becoming too large */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-img {
+        width: 80%;
+    }
+    
+    .auth-img img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-img {
+        width: 90%;
+    }
+    
+    .auth-img img {
+        width: 90%;
+    }
+}

@@ -1,0 +1,144 @@
+/* Banner Section */
+.banner {
+    background: linear-gradient(to top right, green, white, orange);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 3rem;
+    flex-wrap: nowrap; /* Ensures layout remains same on large screens */
+}
+
+/* Banner Text */
+.banner-txt {
+    padding: 2rem;
+    margin: 0 8rem;
+    text-align: left;
+    max-width: 50%;
+}
+
+/* Small Text */
+.banner-txt .banner-smtxt {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+/* Large Text */
+.banner-txt .banner-lgtxt {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Shop Now Button */
+.banner-txt .shop-now {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.banner-txt .shop-now:hover {
+    background-color: #333;
+}
+
+/* Banner Image */
+.banner-img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img img {
+    width: 70%;
+    max-width: 100%;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .banner {
+        padding: 2rem;
+        flex-wrap: nowrap; /* Prevents stacking */
+    }
+
+    .banner-txt {
+        max-width: 50%;
+        margin: 0 4rem;
+    }
+
+    .banner-img {
+        width: 30%; /* Reduce image size */
+    }
+
+    .banner-txt .banner-lgtxt {
+        font-size: 2.5rem;
+    }
+
+    .banner-txt .shop-now {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-wrap: wrap; /* Allows wrapping for medium screens */
+        justify-content: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .banner-txt {
+        max-width: 80%; /* Allow text to take more space */
+        text-align: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .banner-txt .banner-smtxt {
+        font-size: 1rem;
+    }
+
+    .banner-txt .banner-lgtxt {
+        font-size: 2rem;
+    }
+
+    .banner-img {
+        width: 50%; /* Shrink image */
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-txt {
+        padding: 1rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .banner-txt .banner-smtxt {
+        font-size: 0.9rem;
+    }
+
+    .banner-txt .banner-lgtxt {
+        font-size: 1.8rem;
+    }
+
+    .banner-img {
+        width: 65%; /* Further shrink image */
+    }
+
+    .banner-txt .shop-now {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+}

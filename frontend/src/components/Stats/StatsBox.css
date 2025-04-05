@@ -1,0 +1,148 @@
+/* Container for Statistics */
+.all-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* ✅ Ensures wrapping on smaller screens */
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px; /* ✅ Prevents excessive width */
+}
+
+/* Each Statistic Box */
+.each-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 22%; /* ✅ Uses percentage for better scaling */
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Inner Container */
+.inner {
+    padding: 0.5rem;
+    background-color: #360E38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Logo Icon */
+.logo {
+    font-size: 3rem;
+    color: white;
+    padding: 0 !important;
+    margin: 0;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+.each-stat .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Description */
+.each-stat .description {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Hover Effects */
+.each-stat:hover {
+    background-color: #360E38;
+    color: white;
+    transform: scale(1.05);
+}
+
+.each-stat:hover .inner {
+    background-color: white;
+}
+
+.each-stat:hover .logo {
+    color: black;
+}
+
+/* Active State */
+.stat-active {
+    background-color: #360E38;
+    color: white;
+}
+
+.stat-active .inner {
+    background-color: white;
+}
+
+.stat-active .logo {
+    color: black;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .each-stat {
+        width: 30%;
+        padding: 1.8rem;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .each-stat .title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .each-stat {
+        width: 45%;
+        padding: 1.5rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+        height: 2.2rem;
+        width: 2.2rem;
+    }
+
+    .each-stat .title {
+        font-size: 1.3rem;
+    }
+
+    .each-stat .description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .each-stat {
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .each-stat .title {
+        font-size: 1.2rem;
+    }
+
+    .each-stat .description {
+        font-size: 0.85rem;
+    }
+}

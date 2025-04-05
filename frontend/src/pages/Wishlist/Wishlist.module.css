@@ -1,0 +1,22 @@
+.wishlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adds spacing between items */
+    margin: 2rem;
+    justify-content: center; /* Centers items on smaller screens */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
+    .wishlist {
+        margin: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+    .wishlist {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+        margin: 1rem;
+    }
+}

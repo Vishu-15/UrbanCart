@@ -1,0 +1,30 @@
+/* Default HR Styling */
+hr {
+    width: 90%; /* Ensures HR takes up 90% of the available width */
+    margin: 0 auto; /* Centers the HR */
+    border: 0;
+    height: 1px;
+    background-color: #ddd; /* Light gray color */
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    hr {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    hr {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    hr {
+        width: 75%;
+        margin: 0 auto;
+    }
+}

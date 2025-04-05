@@ -1,0 +1,104 @@
+/* 📌 Products Page */
+.products-page {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* ✅ Prevents horizontal scrolling */
+}
+
+/* 📌 Ensure the entire body/page doesn't allow x-overflow */
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📌 Products Container */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ Adjusts based on screen */
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px; /* ✅ Prevents extreme stretching */
+    justify-content: center;
+    padding: 0 1rem; /* ✅ Prevents margin overflow */
+    box-sizing: border-box; /* ✅ Ensures padding doesn't cause overflow */
+}
+
+/* 📌 Category Select Dropdown */
+.products-page .category-select {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 15rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effect */
+.products-page .category-select:hover {
+    border-color: #360E38;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1200px) {
+    .products-container {
+        grid-template-columns: repeat(3, 1fr); /* ✅ 3 products per row */
+    }
+}
+
+@media (max-width: 1024px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 products per row */
+    }
+    
+    .products-page .category-select {
+        right: 3%;
+        width: 12rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .products-page {
+        padding: 1rem;
+    }
+
+    .products-page .category-select {
+        right: 2%;
+        width: 10rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: repeat(1, 1fr); /* ✅ 1 product per row */
+        gap: 0.8rem;
+    }
+
+    .products-page {
+        padding: 1rem;
+    }
+
+    .products-page .category-select {
+        position: relative;
+        right: auto;
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+}

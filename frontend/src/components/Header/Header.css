@@ -1,0 +1,74 @@
+/* Header Container */
+.header {
+    background-color: #360E38;
+    color: white;
+    width: 100%;
+    max-width: 100vw; /* Ensures it never overflows */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers items */
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    text-align: center;
+    gap: 1rem; /* Adds spacing between elements */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+/* Text Styling */
+.header-txt {
+    font-size: 1rem;
+    word-break: break-word; /* Prevents text overflow */
+}
+
+/* Individual Text Spacing */
+.header .text-1,
+.header .text-2,
+.header .text-3 {
+    margin: 0 auto; /* Ensures proper centering */
+    flex: 1; /* Ensures equal width */
+    min-width: 150px; /* Prevents text breaking weirdly */
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .header {
+        justify-content: space-around;
+    }
+    
+    .header .text-1,
+    .header .text-2,
+    .header .text-3 {
+        margin: 0;
+        flex: 1; /* Keeps proper spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .header .text-1,
+    .header .text-2,
+    .header .text-3 {
+        width: 100%; /* Full width for small screens */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .header .text-1,
+    .header .text-2,
+    .header .text-3 {
+        font-size: 0.9rem; /* Adjust font size for small screens */
+        min-width: auto; /* Removes unnecessary spacing */
+    }
+}

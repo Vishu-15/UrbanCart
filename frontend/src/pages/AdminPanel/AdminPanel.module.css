@@ -1,0 +1,153 @@
+/* Outer Container */
+.adminContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto; /* Reduced margin */
+    gap: 20px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: #5a2d82; /* Dark Purple */
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #4a236a; /* New Background Color */
+    color: #f0c040; /* New Text Color */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar ul li:hover,
+.sidebar ul .active {
+    background-color: #4a236a; /* Darker shade */
+}
+
+/* Main Content */
+.mainContent {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.mainContent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Grid Layout */
+.contentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #ddd;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.productImage {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: #e5e7eb;
+}
+
+/* Order Items List */
+.card ul {
+    padding-left: 20px;
+}
+
+.card ul li {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* Buttons */
+.button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #5a2d82;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #4a236a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .adminContainer {
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px; /* Reduced margin for mobile screens */
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .mainContent {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+}

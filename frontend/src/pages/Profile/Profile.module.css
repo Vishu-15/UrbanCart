@@ -1,0 +1,245 @@
+/* Main profile page layout */
+.profilePage {
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader styling */
+.loader {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Profile Header - Profile Picture and Name */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profilePic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+
+.profilePic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileInfo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.profileInfo h2 {
+  margin: 0;
+}
+
+.profileInfo p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Profile Details Section */
+.profileDetails {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.profileDetails h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #360e38;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoItem {
+  margin-bottom: 1rem;
+}
+
+.infoItem label {
+  font-weight: bold;
+}
+
+.infoItem input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: black;
+  font-size: 1rem;
+}
+
+.infoItem p {
+  font-size: 1.1rem;
+}
+
+.editButton {
+  background-color: #360e38;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.editButton:hover {
+  background-color: #520e5c;
+}
+
+/* Buttons for My Orders, Wishlist, and Admin Panel */
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+}
+
+.actionButton {
+  flex: 1;
+  max-width: 250px;
+  padding: 1rem 2rem;
+  background-color: #520e5c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 0 10px;
+}
+
+.actionButton:hover {
+  background-color: #360e38;
+  transform: scale(1.05);
+}
+
+/* Admin Panel Button */
+.adminButton {
+  flex: 1;
+  max-width: 250px;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+}
+
+.adminButton:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: scale(1.05);
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 768px) {
+  .profilePage {
+    padding: 2rem 1rem;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profilePic {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .profileInfo h2 {
+    font-size: 1.3rem;
+  }
+
+  .profileDetails {
+    padding: 1.5rem;
+  }
+
+  .profileDetails h3 {
+    font-size: 1.5rem;
+  }
+
+  .infoItem input {
+    font-size: 1rem;
+  }
+
+  .editButton {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actionButton,
+  .adminButton {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profilePic {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .profileInfo h2 {
+    font-size: 1.2rem;
+  }
+
+  .profileInfo p {
+    font-size: 1rem;
+  }
+
+  .editButton {
+    padding: 0.8rem;
+  }
+
+  .actionButton,
+  .adminButton {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
+}

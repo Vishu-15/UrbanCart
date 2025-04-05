@@ -1,0 +1,41 @@
+{
+  "name": "e-commerce",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@cashfreepayments/cashfree-js": "^1.0.5",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@faker-js/faker": "^9.0.3",
+    "@mui/icons-material": "^6.1.3",
+    "@mui/material": "^6.1.3",
+    "axios": "^1.7.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.27.0",
+    "react-spinners": "^0.15.0",
+    "router-dom": "^3.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.12",
+    "globals": "^15.9.0",
+    "vite": "^5.4.8"
+  }
+}

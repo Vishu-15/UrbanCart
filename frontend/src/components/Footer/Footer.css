@@ -1,0 +1,197 @@
+/* Footer Section */
+.footer {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+/* Footer Content Container */
+.footer-content {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+/* Individual Footer Columns */
+.footer-cols {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+/* Text Spacing */
+.footer-cols div {
+    line-height: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Section Headings */
+.footer-cols .heading {
+    font-weight: 600;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+/* Brand & Subscription */
+.footer-brand .brand-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.footer-brand .subscribe {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.6rem 0;
+}
+
+/* Email Subscription */
+.footer-brand .mail {
+    background-color: transparent;
+    width: 90%;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand .mail input {
+    background-color: transparent;
+    width: 75%;
+    border: none;
+    color: white;
+    padding: 0.3rem;
+}
+
+.footer-brand .mail input:focus {
+    outline: none;
+}
+
+.footer-brand .mail button {
+    background-color: transparent;
+    color: white;
+    width: 22%;
+    border: none;
+    cursor: pointer;
+}
+
+/* App Download & Socials */
+.app-download .app-offer {
+    font-size: 0.8rem;
+}
+
+.app-download .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Section Widths */
+.footer-brand {
+    width: 14rem;
+}
+.supports {
+    width: 9rem;
+}
+.accounts {
+    width: 7rem;
+}
+.quick-links {
+    width: 7rem;
+}
+.app-download {
+    width: 15rem;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 1024px) {
+    .footer-content {
+        width: 95%;
+    }
+
+    .footer-cols {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-cols {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand,
+    .supports,
+    .accounts,
+    .quick-links,
+    .app-download {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-brand .mail {
+        width: 100%;
+    }
+
+    .footer-brand .mail input {
+        width: 80%;
+    }
+
+    .footer-brand .mail button {
+        width: 18%;
+    }
+
+    .app-download .socials {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    .footer-cols {
+        text-align: center;
+    }
+
+    .footer-brand .mail input {
+        font-size: 0.9rem;
+    }
+
+    .footer-brand .mail button {
+        font-size: 0.9rem;
+    }
+
+    .app-download .socials {
+        flex-direction: column;
+    }
+}
