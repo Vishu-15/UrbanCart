@@ -15,21 +15,25 @@ export default function Navbar() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const storedUser = localStorage.getItem('urbancart-user');
-    
-        if (!storedUser) return;
-    
-        axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser")
-            .then((response) => {
-                const user = response?.data?.user;
-                if (!user || user.email !== storedUser) {
+        async function getUserData(){
+            const storedUser = localStorage.getItem('urbancart-user');
+        
+            if (!storedUser) return;
+        
+            axios.get("https://urbancart-backend-5jg9.onrender.com/api/getUser",{withCredentials: true,})
+                .then((response) => {
+                    const user = response?.data?.user;
+                    if (!user || user.email !== storedUser) {
+                        localStorage.removeItem('urbancart-user');
+                    }
+                    console.log(user);
+                })
+                .catch((error) => {
                     localStorage.removeItem('urbancart-user');
-                }
-            })
-            .catch((error) => {
-                localStorage.removeItem('urbancart-user');
-                console.error("Error fetching user data:", error);
-            });
+                    console.error("Error fetching user data:", error);
+                });
+        }
+        getUserData();
     }, []);
     
 

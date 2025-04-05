@@ -22,7 +22,7 @@ const sessionOptions={
       maxAge: 7*24*60*60*1000,
       secure: false, // true if using HTTPS in production
       httpOnly: true, //to prevent cross script attacks
-      sameSite: 'lax', // or 'none' if cross-origin + HTTPS
+      sameSite: 'none', // or 'none' if cross-origin + HTTPS
   },
 };
 

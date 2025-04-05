@@ -30,6 +30,7 @@ export default function Login(){
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                withCredentials: true,
             });
             localStorage.setItem('urbancart-user',response.data.user.email);
             console.log('Login successful:', response.data);
