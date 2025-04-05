@@ -12,17 +12,20 @@ const store = MongoStore.create({
 store.on("error",(err)=>{
   console.log("ERROR IN MONGO SESSION STORE :",err);
 });
-const sessionOptions={
+const sessionOptions = {
   store,
-  secret:process.env.SESSION_SECRET,
-  resave:false,
-  saveUninitialized:true,
-  cookie:{
-      expires: Date.now() + 7*24*60*60*1000,
-      maxAge: 7*24*60*60*1000,
-      httpOnly: true, //to prevent cross script attacks
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+    sameSite: 'none',     // ✅ This allows cross-origin session cookies
+    secure: true          // ✅ Required with sameSite: 'none' over HTTPS
   },
 };
+
 
 module.exports = sessionOptions;
   
