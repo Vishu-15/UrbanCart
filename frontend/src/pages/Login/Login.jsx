@@ -32,10 +32,12 @@ export default function Login(){
                 },
                 withCredentials: true,
             });
-            localStorage.setItem('urbancart-user',response.data.user.email);
-            console.log('Login successful:', response.data);
-            toast("Logged In Successfully!");
-            // navigate('/'); 
+            if(response){
+                localStorage.setItem('urbancart-user',response.data.user.email);
+                console.log('Login successful:', response.data);
+                toast("Logged In Successfully!");
+                navigate('/'); 
+            }
         } 
         catch (error) {
             console.error('Login failed:', error.response?.data || error.message);
