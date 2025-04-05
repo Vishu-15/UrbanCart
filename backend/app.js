@@ -23,7 +23,7 @@ async function main() {
 }
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://urbancart-frontend.onrender.com',
   credentials: true, // Allow cookies to be sent
 }));
 app.use(express.json()); 
