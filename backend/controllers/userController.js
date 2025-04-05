@@ -136,7 +136,7 @@ module.exports.signup = async(req,res)=>{
 }
 
 module.exports.login = async (req, res)=>{
-    // console.log(req.user);
+    console.log(req.user);
     res.status(200).json({ message: 'Login successful', user: req.user });
 }
 
