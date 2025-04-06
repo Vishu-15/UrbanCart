@@ -8,6 +8,7 @@ Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY;
 Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
 module.exports.createOrder = async(req,res)=>{
+  try{
     console.log(req.body);
     let{name,street,city,state,postalCode,country,phoneNumber,email}=req.body;
   
@@ -77,6 +78,11 @@ module.exports.createOrder = async(req,res)=>{
         console.error('Error:', error.response?.data?.message || error.message || "Unknown error");
         res.status(500).json({ error: error.response?.data?.message || "Payment processing error" });
     });
+  }
+  catch(e){
+    res.status(401).json({message:e.message});
+    console.log(e.message);
+  }
 }
 
 module.exports.verifyPayment = async(req,res)=>{
