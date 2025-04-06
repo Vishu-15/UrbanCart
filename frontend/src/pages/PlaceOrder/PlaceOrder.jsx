@@ -28,6 +28,7 @@ const PlaceOrder = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                withCredentials: true,
             });
             console.log("Order created:", res);
 
