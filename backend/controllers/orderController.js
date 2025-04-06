@@ -30,7 +30,12 @@ module.exports.createOrder = async(req,res)=>{
   
     // Update phone number if missing
     if (!user.phoneNumber) {
-      user.phoneNumber = phoneNumber;
+      if( phoneNumber.length==10){
+        user.phoneNumber = phoneNumber;
+      }
+      else{
+        res.status(401).json({message:"Enter a valid phone no. : "});
+      }
     }
   
     await user.save();
