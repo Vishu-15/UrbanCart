@@ -61,7 +61,7 @@ export default function MyOrders() {
                                             <img src={item.productId.images[0]} alt={item.productId.title} className={styles.productImage} />
                                             <div className={styles.itemDetails}>
                                                 <div className={styles.productTitle}>{item.productId.title}</div>
-                                                <div className={styles.productPrice}>${(item.productId.price*item.quantity).toFixed(2)}</div>
+                                                <div className={styles.productPrice}>Rs.{(item.productId.price*item.quantity).toFixed(2)}</div>
                                                 <div className={styles.productRating}>Rating: {item.productId.rating} ⭐</div>
                                                 <div className={styles.productQuantity}>Quantity: {item.quantity}</div>
                                             </div>
