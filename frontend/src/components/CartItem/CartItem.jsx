@@ -23,11 +23,11 @@ const CartItem = ({ item, isMobile }) => {
                 <img src={item.productId.images[0]} alt={item.productId.name} />
                 <span className="cart-item-name">{item.productId.name}</span>
             </td>
-            <td className="cart-item-price">$ {item.productId.price}</td>
+            <td className="cart-item-price">Rs. {item.productId.price}</td>
             <td className="cart-item-quantity">{item.quantity}</td>
             {!isMobile && (
                 <td className="cart-item-subtotal">
-                    $ {(item.productId.price * item.quantity).toFixed(2)}
+                    Rs. {(item.productId.price * item.quantity).toFixed(2)}
                 </td>
             )}
         </tr>

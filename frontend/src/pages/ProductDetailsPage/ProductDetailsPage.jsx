@@ -84,7 +84,7 @@ const ProductDetailsPage = () => {
                     <span className='prod-info-availability'>{product.availabilityStatus}</span>
                 </div>
                 <p>
-                    <span className='prod-info-price'>$ {product.price}</span>
+                    <span className='prod-info-price'>Rs. {product.price}</span>
                     <span className='prod-info-discount'>({product.discountPercentage}% OFF)</span>
                 </p>
                 <p className='prod-info-desc'>{product.description}</p>
