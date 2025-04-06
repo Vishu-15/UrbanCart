@@ -89,15 +89,17 @@ const ProductDetailsPage = () => {
                 </p>
                 <p className='prod-info-desc'>{product.description}</p>
                 <hr className='prod-info-hr'/>
-                <div className="prod-info-actions">
-                    <div className="quantitySelect">
-                        <div className="manQuant" onClick={()=>{handleQuantitySelected(-1)}}>-</div>
-                        <div className="quantityCount">{quantitySelected}</div>
-                        <div className="manQuant" onClick={()=>{handleQuantitySelected(1)}}>+</div>
+                {
+                    localStorage.getItem('urbancart-user') &&
+                    <div className="prod-info-actions">
+                        <div className="quantitySelect">
+                            <div className="manQuant" onClick={()=>{handleQuantitySelected(-1)}}>-</div>
+                            <div className="quantityCount">{quantitySelected}</div>
+                            <div className="manQuant" onClick={()=>{handleQuantitySelected(1)}}>+</div>
+                        </div>
+                        <div className="buy-now" onClick={handleBuyButton}>Add To Cart</div>
                     </div>
-                    <div className="buy-now" onClick={handleBuyButton}>Add To Cart</div>
-                </div>
-
+                }
             </div>
         </div>
     </Layout>
