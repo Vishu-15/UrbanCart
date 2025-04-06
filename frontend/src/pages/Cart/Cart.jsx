@@ -76,19 +76,19 @@ const Cart = () => {
                     <div className="bill-subtotal">
                         <div className="bill-title">Subtotal:</div>
                         <div className="bill-price">
-                            ${cartItems.reduce((sum, currItem) => sum + parseFloat(currItem.productId.price) * currItem.quantity, 0).toFixed(2)}
+                            Rs.{cartItems.reduce((sum, currItem) => sum + parseFloat(currItem.productId.price) * currItem.quantity, 0).toFixed(2)}
                         </div>
                     </div>
                     <hr className="bill-hr" />
                     <div className="bill-shipping-charges">
                         <div className="bill-title">Shipping Charges:</div>
-                        <div className="bill-price">$ 0</div>
+                        <div className="bill-price">Rs. 0</div>
                     </div>
                     <hr className="bill-hr" />
                     <div className="bill-total">
                         <div className="bill-title">Total:</div>
                         <div className="bill-price">
-                            ${cartItems.reduce((sum, currItem) => sum + parseFloat(currItem.productId.price) * currItem.quantity, 0).toFixed(2)}
+                            Rs.{cartItems.reduce((sum, currItem) => sum + parseFloat(currItem.productId.price) * currItem.quantity, 0).toFixed(2)}
                         </div>
                     </div>
                     <button className="place-order" onClick={handlePlaceOrder}>
