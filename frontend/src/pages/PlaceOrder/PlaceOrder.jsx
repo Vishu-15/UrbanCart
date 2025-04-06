@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
+import { useNavigate } from 'react-router-dom';
 import './PlaceOrder.css';
 import { load } from "@cashfreepayments/cashfree-js";
 import Layout from '../../components/Layout/Layout';
@@ -7,7 +8,7 @@ import toast from 'react-hot-toast';
 import Loader from '../../components/Loader/Loader';
 
 const PlaceOrder = () => {
-
+    const navigate = useNavigate();
     let cashfree;
     // Initialize SDK
     const initializeSDK = async () => {
@@ -67,7 +68,7 @@ const PlaceOrder = () => {
             if (res && res.data && res.data.length) {
                 if(res.data[0].payment_status=='SUCCESS'){
                     toast("Payment Successful , Order Placed!");
-                    window.location.href="http://localhost:5173";
+                    navigate('/');
                 }
                 else{
                     toast("Payment failed");
