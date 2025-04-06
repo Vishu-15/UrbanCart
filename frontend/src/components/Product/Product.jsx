@@ -46,7 +46,7 @@ const Product = ({product,showWishIcon=true}) => {
         </div>
       </Link>
         <div className="prod-name">{product.title}</div>
-        <div className="prod-price">$ {product.price}</div>
+        <div className="prod-price">Rs. {product.price}</div>
         <Rating className="prod-rating" name="read-only" value={product.rating} readOnly />
         <div className="prod-discount">-{product.discountPercentage}%</div>
       {showWishIcon && currUser?<div className="prod-wishlist" onClick={()=>{handleLikeBtn(product)}}>{currUser.wishlist.filter((item)=> item._id == product._id).length>0?<FavoriteIcon/>:<FavoriteBorderIcon/>}</div>:""}
