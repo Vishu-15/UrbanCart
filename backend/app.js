@@ -22,6 +22,8 @@ async function main() {
   await mongoose.connect(dbUrl);
 }
 
+app.set('trust proxy', 1);
+
 app.use(cors({
   origin: 'https://urbancart-frontend.onrender.com',
   credentials: true, // Allow cookies to be sent
